@@ -1,0 +1,59 @@
+int l1=2;
+int l2=3;
+int l3=4;
+int sw=7;
+int val;
+int c=0;
+
+
+
+void setup()
+{
+  pinMode(l1, OUTPUT);
+  pinMode(l2, OUTPUT);
+  pinMode(l3, OUTPUT);
+  pinMode(sw, INPUT);
+    
+}
+
+
+
+
+void loop()
+{
+  val=digitalRead(sw);
+	
+  if(val==HIGH){
+    
+   c++;
+    
+}
+  
+  if(c==1){
+  digitalWrite(l1,HIGH);
+  
+  }
+  if(c==2){
+  digitalWrite(l2,HIGH);
+  
+  }
+  if(c==3){
+  digitalWrite(l3,HIGH);
+  
+  }
+ 
+  if(c==4){
+  digitalWrite(l1,HIGH);
+  digitalWrite(l2,HIGH);
+  digitalWrite(l3,HIGH);  
+  
+  }
+  else{
+  digitalWrite(l1,LOW);
+  digitalWrite(l2,LOW);
+  digitalWrite(l3,LOW);
+  c=0;
+  }
+  
+  
+  }
