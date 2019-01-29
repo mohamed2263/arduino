@@ -1,0 +1,50 @@
+int carred=2;
+int caryellow=3;
+int cargreen=4;
+int pepred=5;
+int pepgreen=6;
+int sw=7;
+int val;
+
+void setup() {
+  pinMode(carred,OUTPUT);
+  pinMode(caryellow,OUTPUT);
+  pinMode(cargreen,OUTPUT);
+  pinMode(pepred,OUTPUT);
+  pinMode(pepgreen,OUTPUT);
+  pinMode(sw,INPUT);
+  
+}
+
+void loop() {
+
+
+  val=digitalRead(sw);
+  if(val==LOW)
+  {
+    digitalWrite(carred,HIGH);
+    digitalWrite(pepgreen,HIGH);
+    delay(40000);
+    digitalWrite(carred,LOW);
+    digitalWrite(caryellow,HIGH);
+    delay(5000);
+    digitalWrite(pepgreen,LOW);
+    digitalWrite(caryellow,LOW);
+    digitalWrite(cargreen,HIGH);
+    digitalWrite(pepred,HIGH);
+    delay(40000);
+    digitalWrite(caryellow,HIGH);
+    digitalWrite(cargreen,LOW);
+    delay(5000);
+    digitalWrite(pepred,LOW);
+    digitalWrite(caryellow,LOW);
+    
+    }
+
+  else{
+    digitalWrite(carred,HIGH);
+    digitalWrite(pepred,HIGH);
+    
+    }
+
+}
